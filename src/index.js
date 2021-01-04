@@ -1,6 +1,12 @@
+/*
+ * @Autor: jyb
+ * @Description: 
+ * @LastEditTime: 2021-01-04 11:41:11
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'antd/dist/antd.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

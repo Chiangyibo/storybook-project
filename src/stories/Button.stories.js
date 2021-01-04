@@ -1,36 +1,30 @@
 import React from 'react';
 
-import  {Button}  from '../comonents/YonButton';
+import  { YonButton }  from '../comonents/YonButton';
 
 export default {
   title: 'Example/Button',
-  component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
-};
+  component: YonButton
+}
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <YonButton {...args} >按钮</YonButton>;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  yontype: 'primary'
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Button',
+export const Dark = Template.bind({});
+Dark.args = {
+  yontype: 'dark'
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
+export const Light = Template.bind({});
+Light.args = {
+  yontype: 'light'
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+export const Default = Template.bind({});
+Default.args = {
+  yontype: 'default'
 };
