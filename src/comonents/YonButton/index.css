@@ -1,5 +1,6 @@
-.yon-btn{
+.yon-btn {
   height: 28px;
+  line-height: 26px;
   padding: 0 12px;
   margin: 0 4px;
   font-size: 12px;
@@ -12,54 +13,143 @@
   white-space: nowrap;
   user-select: none;
 }
-.yon-btn-default{
+.ant-btn-group .yon-btn {
+      margin: 0px;
+      border-radius: 0 0 0 0!important;
+}
+      .ant-btn-group .yon-btn:first-child{
+          margin-left: 4px;
+          border-radius: 4px 0 0 4px!important;
+      }
+      .ant-btn-group .yon-btn:last-child{
+          margin-left: -1px;
+          margin-right: 4px;
+          border-radius:  0 4px 4px 0!important;
+      }
+  
+
+.yon-btn-default {
   border-radius: 4px;
   border: 1px solid #d9d9d9;
   background: transparent;
   color: #505766;
 }
-.ys-btn-default:hover, 
-.ys-btn-default:focus{
-  border: 1px solid #505766;
-  background: transparent;
-  color: #505766;
-}
-.yon-btn-primary{
+  .yon-btn-default:hover,
+  .yon-btn-default:focus {
+      border: 1px solid #505766;
+      background: transparent;
+      color: #505766;
+  }
+
+  .yon-btn-default.disabled,
+  .yon-btn-default.disabled:hover,
+  .yon-btn-default[disabled]:hover,
+  .yon-btn-default[disabled] {
+      background: transparent;
+      border: 1px solid #eeeeee;
+      color: #a4a4a4;
+  }
+
+.yon-btn-primary {
   border-radius: 4px;
-  background: linear-gradient(45deg,#fc4c2f,#ee2223);
-  border: none;
-  color: #fff;
-} 
-
-.ys-btn-primary:hover, 
-.ys-btn-primary:focus{
-  background: linear-gradient(315deg,#fc4c2f,#ee2223);
+  background: linear-gradient(45deg, #fc4c2f, #ee2223);
   border: none;
   color: #fff;
 }
+  .yon-btn-primary:hover,
+  .yon-btn-primary:focus {
+      background: linear-gradient(315deg, #fc4c2f, #ee2223);
+      border: none;
+      color: #fff;
+  }
 
-.yon-btn-dark{
+  .yon-btn-primary.disabled,
+  .yon-btn-primary.disabled:hover,
+  .yon-btn-primary[disabled]:hover,
+  .yon-btn-primary[disabled] {
+      background: linear-gradient(315deg, #fea699 0%, #f69191 100%);
+      border: none;
+      color: #fff;
+  }
+
+
+.yon-btn-dark {
   border-radius: 4px;
   background: #505766;
   color: #fff;
   border: none;
-} 
-.ys-btn-primary:hover, 
-.ys-btn-primary:focus{
-  background: #616875;
-  border: none;
-  color: #fff;
 }
+  .yon-btn-dark:hover,
+  .yon-btn-dark:focus {
+      background: #616875;
+      border: none;
+      color: #fff;
+  }
+  .yon-btn-dark.disabled,
+  .yon-btn-dark.disabled:hover,
+  .yon-btn-dark[disabled]:hover,
+  .yon-btn-dark[disabled] {
+      background: #b0b3ba;
+      border: none;
+      color: #fff;
+  }
 
-.yon-btn-light{
+
+.yon-btn-light {
   border-radius: 4px;
-  background: #DBE0E5;
+  background: #dbe0e5;
   color: #666;
   border: none;
-} 
-.ys-btn-light:hover, 
-.ys-btn-light:focus{
-  background: #E5E9EC!important;
-  border: none!important;
-  color: #666!important;
+}
+  .yon-btn-light:hover,
+  .yon-btn-light:focus {
+      background: #e5e9ec;
+      border: none;
+      color: #666;
+  }
+  .yon-btn-light.disabled,
+  .yon-btn-light.disabled:hover,
+  .yon-btn-light[disabled]:hover,
+  .yon-btn-light[disabled] {
+      background: #f7f7f7;
+      border: none;
+      color: #666;
+  }
+
+
+.yon-btn-link {
+  background: transparent;
+  color: #588CE9;
+  border: none;
+}
+  .yon-btn-link:hover,
+  .yon-btn-link:focus {
+      background: transparent;
+      border: none;
+      color: #8DBBF5;
+  }
+  .yon-btn-link.disabled,
+  .yon-btn-link.disabled:hover,
+  .yon-btn-link[disabled]:hover,
+  .yon-btn-link[disabled] {
+      background: transparent;
+      border: none;
+      color: rgba(0, 0, 0, 0.15);
+  }
+
+
+.no-min-width {
+  min-width: auto;
+  max-width: none;
+  padding: 0;
+  text-align: center;
+}
+
+.yon-btn-small{
+  height: 22px!important;
+  line-height: 20px!important;
+}
+.yon-btn-middle{
+  height: 26px!important;
+  line-height: 24px!important;
 }
