@@ -1,5 +1,11 @@
+/*
+ * @Autor: jyb
+ * @Description: 
+ * @LastEditTime: 2021-01-04 13:08:54
+ */
 import logo from './logo.svg';
-import './App.css';
+import  { YonButton }  from './comonents/YonButton';
+import './App.less';
 
 function App() {
   return (
@@ -9,6 +15,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+        <YonButton yontype="primary">primary</YonButton>
         <a
           className="App-link"
           href="https://reactjs.org"
