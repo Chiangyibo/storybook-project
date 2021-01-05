@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from "@storybook/react";
-import { YonButton } from '../comonents/YonButton';
+import  YonButton  from '../comonents/YonButton';
 
 const Button = () => {
   return (
@@ -24,5 +24,4 @@ const Button2 = () => {
   )
 }
 
-storiesOf("按钮", module).add('Button', Button);
-storiesOf("按钮2", module).add('Button2', Button2);
+storiesOf("Example2", module).add('Button', Button);
