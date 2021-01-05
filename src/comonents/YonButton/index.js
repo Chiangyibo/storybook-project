@@ -1,5 +1,5 @@
 /*
-    *  自定义属性有 yontype、width、yonsize、customicon; 其他属性继承 antd。
+    *  自定义属性有 yontype、width、yonsize; 其他属性继承 antd。
     *  
     *  默认按钮宽度最大140px、最小60px, 如果按钮宽度不在此范围内需要设置width。
     *  block 失效，可用 width="100%" 替代。
@@ -14,7 +14,6 @@
     yontype: ['default', 'primary', 'dark', 'light', 'link']
     yonsize: ['small', 'middle']
     width: '28px'
-    customicon: {iconSVG}
 */
 
 import React from 'react';
@@ -23,13 +22,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './index.css';
 
-export const YonButton = (props) => {
-    const customiconStyle = {
-        position:'relative',
-        top:'3px',
-        fontSize: '12px',
-        padding: '0 2px'
-    }
+const YonButton = (props) => {
     return (
         <Button
             {...props}
@@ -51,9 +44,6 @@ export const YonButton = (props) => {
                 borderRadius: props.shape === "circle" ? "50%" : '4px'
             }}
         >
-            {
-                !!props.customicon && <img src={props.customicon} style={customiconStyle}/>
-            }
             {props.children}
         </Button>
     );
@@ -62,9 +52,14 @@ export const YonButton = (props) => {
 YonButton.propTypes = {
     yontype: PropTypes.string,
     width: PropTypes.string,
+    yonsize: PropTypes.string
 };
 
 YonButton.defaultProps = {
     yontype: null,
     width: null,
+    yonsize: ''
 };
+
+
+export default YonButton
