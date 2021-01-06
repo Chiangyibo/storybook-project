@@ -16,12 +16,5 @@ const Button = () => {
     </div>
   )
 }
-const Button2 = () => {
-  return (
-    <div>
-      <YonButton yonsize="middle" yontype="primary">主要按钮2</YonButton>
-    </div>
-  )
-}
 
 storiesOf("Example2", module).add('Button', Button);

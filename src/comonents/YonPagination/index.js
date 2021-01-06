@@ -39,7 +39,7 @@ const lang = {
     },
 }
 
-let locale = window.localStorage.getItem('locale');
+let locale = window.localStorage.getItem('locale') || 'zh_CN';
 
 
 const YonPagination = (props) => {

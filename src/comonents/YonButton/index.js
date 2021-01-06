@@ -22,6 +22,8 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import './index.css';
 
+const { Group } = Button;
+
 const YonButton = (props) => {
     return (
         <Button
@@ -61,5 +63,5 @@ YonButton.defaultProps = {
     yonsize: ''
 };
 
-
+YonButton.Group = Group;
 export default YonButton

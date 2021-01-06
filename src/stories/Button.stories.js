@@ -1,30 +1,98 @@
 import React from 'react';
+// import { Button } from "antd";
+import { storiesOf } from "@storybook/react";
+import YonButton from '../comonents/YonButton';
 
-import  { YonButton }  from '../comonents/YonButton';
+import { SearchOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
 
-export default {
-  title: 'Example/Button',
-  component: YonButton
-}
+import iconqita from './img/qita.svg';
+import iconcaiwu from './img/caiwu.svg';
 
-const Template = (args) => <YonButton {...args} >按钮</YonButton>;
+const ButtonGroup = YonButton.Group;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  yontype: 'primary'
-};
 
-export const Dark = Template.bind({});
-Dark.args = {
-  yontype: 'dark'
-};
+const Qita = () => <img alt="icon" src={iconqita} style={{ width: '22px', paddingRight: '4px', position: 'relative', top: '-2px' }} />
+const Caiwu = () => <img alt="icon" src={iconcaiwu} style={{ width: '22px', paddingRight: '4px', position: 'relative', top: '-2px' }} />
 
-export const Light = Template.bind({});
-Light.args = {
-  yontype: 'light'
-};
 
-export const Default = Template.bind({});
-Default.args = {
-  yontype: 'default'
-};
+const yontype = () => <>
+  <YonButton yontype="primary">主要按钮</YonButton>
+  <YonButton yontype="primary" disabled>主要按钮</YonButton>
+  <YonButton yontype="default">默认按钮</YonButton>
+  <YonButton yontype="default" disabled>默认按钮</YonButton>
+  <YonButton yontype="dark">深色按钮</YonButton>
+  <YonButton yontype="dark" disabled>深色按钮</YonButton>
+  <YonButton yontype="light">浅色按钮</YonButton>
+  <YonButton yontype="light" disabled>浅色按钮</YonButton>
+  <YonButton yontype="link" >Link 按钮</YonButton>
+  <YonButton yontype="link" disabled>Link 按钮</YonButton>
+</>;
+
+
+const yonsize = () => <>
+  <YonButton yontype="primary">28px 默认按钮</YonButton>
+  <YonButton yonsize="middle" yontype="primary">26px 弹框按钮</YonButton>
+  <YonButton yonsize="small" yontype="primary">22px 行操作按钮</YonButton>
+  <div style={{ height: '20px' }}></div>
+  <YonButton width="100%" yontype="primary">width == 100%</YonButton>
+</>;
+const width = () => <>
+  <YonButton yontype="dark" width="100%" >block </YonButton>
+  <div style={{ height: '20px' }}></div>
+  <YonButton yontype="dark" width="28px" icon={<SearchOutlined />}></YonButton>
+</>;
+
+const icon = () => <>
+  <YonButton type="link" icon={<Qita />}>自定义图标按钮</YonButton>
+  <YonButton yontype="default" icon={<Caiwu />}>自定义图标按钮</YonButton>
+  <div style={{ height: '20px' }}></div>
+  <YonButton type="link" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
+</>;
+
+
+
+const props = () => (<div>
+  <div style={{ padding: '10px 0' }}>
+    <YonButton yontype="primary" loading={false}>loading</YonButton>
+    <YonButton yontype="primary" loading={true}>loading</YonButton>
+    <YonButton onClick={() => { alert('click') }}>onClick</YonButton>
+
+    <YonButton width="28px" shape="circle" icon={<SearchOutlined />}></YonButton>
+    <YonButton width="28px" shape="circle" icon={<SearchOutlined />} disabled></YonButton>
+  </div>
+
+
+
+  <div style={{ padding: '10px 0' }}>
+    <ButtonGroup>
+      <YonButton yontype="default" width="28px" icon={<LeftOutlined />}></YonButton>
+      <YonButton yontype="default" width="28px" icon={<RightOutlined />}></YonButton>
+    </ButtonGroup>
+  </div>
+
+  <div style={{ padding: '10px 0' }}>
+    <ButtonGroup>
+      <YonButton yontype="default">默认按钮1</YonButton>
+      <YonButton yontype="default">默认按钮2</YonButton>
+      <YonButton yontype="default">默认按钮3</YonButton>
+    </ButtonGroup>
+  </div>
+
+  <div style={{ padding: '10px 0' }}>
+    <ButtonGroup>
+      <YonButton yontype="default">按钮组1</YonButton>
+      <YonButton yontype="default">按钮组2</YonButton>
+    </ButtonGroup>
+  </div>
+
+
+</div>
+)
+
+
+storiesOf("Button", module)
+  .add('icon', icon)
+  .add('width', width)
+  .add('yontype', yontype)
+  .add('yonsize', yonsize)
+  .add('props', props);
