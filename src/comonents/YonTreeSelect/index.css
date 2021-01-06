@@ -1,0 +1,102 @@
+.ant-select {
+  font-size: 12px;
+}
+.ant-select-item {
+  font-size: 12px;
+}
+.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 4px;
+  height: 28px;
+  padding: 0 8px;
+}
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #505766;
+}
+.ant-select-focused.ant-select-single:not(.ant-select-customize-imput)
+  .ant-select-selector {
+  border-color: #505766;
+  box-shadow: none;
+}
+.ant-select-selection-item {
+  font-weight: 400;
+}
+.ant-select-single.ant-select-show-arrow .ant-select-selection-item {
+  color: #666;
+  opacity: 1;
+}
+.ant-select-tree .ant-select-tree-node-content-wrapper {
+  font-size: 12px;
+  color: #333333;
+  line-height: 24px;
+  height: 24px;
+}
+.ant-tree-select-dropdown
+  .ant-select-tree-list-holder-inner
+  .ant-select-tree-treenode {
+  padding: 0 0 4px 8px;
+}
+.ant-select-single .ant-select-selector .ant-select-selection-item{
+    line-height: 26px;
+}
+.ant-tree-select-dropdown
+  .ant-select-tree-list-holder-inner
+  .ant-select-tree-treenode
+  .ant-select-tree-node-content-wrapper {
+  flex: none;
+  padding: 0 8px;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+.ant-select-tree .ant-select-tree-node-content-wrapper:hover {
+  background: #f3f5f9;
+}
+.ant-select-tree
+  .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+  background: #fff7e7;
+}
+.ant-select-tree .ant-select-tree-switcher {
+  display: inline-flex;
+  align-items: center;
+  width: 14px;
+}
+.ant-select-tree-switcher-icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+  border: 1px solid #cccccc;
+}
+.ant-select-tree-switcher-icon::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  width: 2px;
+  height: 6px;
+  background: #505766;
+  transition: transform 0.3s ease-out;
+}
+.ant-select-tree-switcher-icon::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 3px;
+  height: 2px;
+  width: 6px;
+  background: #505766;
+  transition: transform 0.3s ease-out;
+}
+.ant-select-tree-switcher_open .ant-select-tree-switcher-icon::after {
+  transform: rotate(90deg);
+}
+.ant-select-tree-switcher_close .ant-select-tree-switcher-icon::after {
+  transform: rotate(0deg);
+}
+.ant-select-tree-switcher_close .ant-select-tree-switcher-icon::before {
+  transform: rotate(0deg);
+}
+.ant-select-tree-indent .ant-select-tree-indent-unit {
+  width: 10px;
+}
