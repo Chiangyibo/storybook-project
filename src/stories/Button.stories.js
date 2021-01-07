@@ -11,8 +11,6 @@ import iconcaiwu from './img/caiwu.svg';
 const ButtonGroup = YonButton.Group;
 
 
-const Qita = () => <img alt="icon" src={iconqita} style={{ width: '22px', paddingRight: '4px', position: 'relative', top: '-2px' }} />
-const Caiwu = () => <img alt="icon" src={iconcaiwu} style={{ width: '22px', paddingRight: '4px', position: 'relative', top: '-2px' }} />
 
 
 const yontype = () => <>
@@ -39,20 +37,12 @@ const width = () => <>
   <YonButton yontype="dark" width="28px" icon={<SearchOutlined />}></YonButton>
 </>;
 
-const icon = () => <>
-  <YonButton yontype="link" icon={<Qita />}>自定义图标按钮</YonButton>
-  <YonButton yontype="default" icon={<Caiwu />}>自定义图标按钮</YonButton>
- 
-  <YonButton yontype="link" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
-  <YonButton yontype="default" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
-</>;
 
 
 
 const props = () => (<div>
   <div style={{ padding: '10px 0' }}>
-    <YonButton yontype="primary" loading={false}>loading</YonButton>
-    <YonButton yontype="primary" loading={true}>loading</YonButton>
+    <YonButton yontype="primary" loading>loading</YonButton>
     <YonButton yontype="default" onClick={action('clicked')}>Click Me</YonButton>
 
     <YonButton yontype="default" width="28px" shape="circle" icon={<SearchOutlined />}></YonButton>
@@ -83,14 +73,22 @@ const props = () => (<div>
     </ButtonGroup>
   </div>
 
-
+  <YonButton yontype="link" icon={<img alt="icon" src={iconqita} style={{ width: '22px', paddingRight: '4px', position: 'relative', top: '-2px' }} />}>自定义图标按钮</YonButton>
+  <YonButton yontype="default" icon={<img alt="icon" src={iconcaiwu} style={{ width: '22px', paddingRight: '4px', position: 'relative', top: '-2px' }} />}>自定义图标按钮</YonButton>
+ 
+  <YonButton yontype="link" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
+  <YonButton yontype="default" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
 </div>
 )
 
 
+const note = `
+  ### 注释
+  icon 属性传入的是一个组件，可以使用 antd 图标，也可以自定义图标
+`
+
 storiesOf("Button", module)
-  .add('icon', icon)
   .add('width', width)
   .add('yontype', yontype)
   .add('yonsize', yonsize)
-  .add('props', props);
+  .add('props', props, {info:{text: note}});

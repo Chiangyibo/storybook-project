@@ -18,9 +18,9 @@ const fixedbottom = () => <>
 
 
 
-
+const note = `### 往下看，组件在底部`
 
 storiesOf("Pagination", module)
   .add('total', total)
   .add('pageSizeOptions', pageSizeOptions)
-  .add('fixedbottom', fixedbottom);
+  .add('fixedbottom', fixedbottom, {info:{text: note}});
