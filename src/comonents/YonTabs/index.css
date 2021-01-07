@@ -1,0 +1,35 @@
+.ant-tabs{
+    color: #505766;
+}
+
+.ant-tabs-ink-bar{
+    background: transparent;
+}
+.ant-tabs-tab{
+    line-height: 22px;
+    padding: 5px 0;
+    margin: 0 20px 0 0;
+}
+.ant-tabs-tab:hover{
+    color: #505766;
+}
+.ant-tabs-top > .ant-tabs-nav::before{
+    border-bottom: 1px solid #505766;
+}
+
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: #EE2223;
+}
+
+.ant-tabs-ink-bar-animated::after{
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom: 3px solid #505766;
+    position: absolute;
+    left: calc(50% - 6px);
+    position: relative;
+    top: -7px;
+}

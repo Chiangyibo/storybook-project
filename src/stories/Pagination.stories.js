@@ -5,22 +5,19 @@ import YonPagination from '../comonents/YonPagination';
 
 const options = [4,8,12,16,64]
 
-const total = () => <>
-    <YonPagination total={89} />
-</>;
-const pageSizeOptions = () => <>
-    <YonPagination total={89} pageSizeOptions={options}/>
-</>;
+
 const fixedbottom = () => <>
+    <YonPagination total={89} />
+    <YonPagination total={89} pageSizeOptions={options}/>
     <YonPagination total={89} fixedbottom/>
 </>;
 
 
 
+const note = `
+  ### 注释
+  仅添加一个 fixedbottom 属性，API 全部继承 antd。
+`
 
-const note = `### 往下看，组件在底部`
 
-storiesOf("Pagination", module)
-  .add('total', total)
-  .add('pageSizeOptions', pageSizeOptions)
-  .add('fixedbottom', fixedbottom, {info:{text: note}});
+storiesOf("Pagination", module).add('Pagination', fixedbottom, {info:{text: note}});

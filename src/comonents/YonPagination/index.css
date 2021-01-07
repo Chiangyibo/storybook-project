@@ -12,6 +12,7 @@
     right: 0;
     padding: 8px 14px;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
 }
 
 .ant-pagination.mini .ant-pagination-item {

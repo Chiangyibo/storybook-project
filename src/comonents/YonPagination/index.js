@@ -54,12 +54,7 @@ const YonPagination = (props) => {
 
 YonPagination.propTypes = {
     /** 固定到底部 */
-    fixedbottom: PropTypes.bool,
-    total: PropTypes.number,
-    onChange: PropTypes.func,
-    onShowSizeChange: PropTypes.func,
-    /** 默认值：[10, 20, 50, 100] */
-    pageSizeOptions: PropTypes.array
+    fixedbottom: PropTypes.bool
 };
 
 

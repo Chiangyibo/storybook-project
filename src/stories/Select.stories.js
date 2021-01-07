@@ -12,6 +12,9 @@ const Select = () => <>
     </YonSelect>
 </>;
 
+const note = `
+  ### 注释
+  仅改了样式，API 全部继承 antd。
+`
 
-
-storiesOf("Select", module).add('select', Select);
+storiesOf("Select", module).add('Select', Select, {info:{text: note}});
