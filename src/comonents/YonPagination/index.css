@@ -4,6 +4,7 @@
     padding-top: 8px;
     text-align: right;
 }
+
 .yon-fixed-bottom-pagination {
     position: fixed;
     bottom: 0;
@@ -12,81 +13,85 @@
     padding: 8px 14px;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
-.ant-pagination.mini  .ant-pagination-item {
-        min-width: 20px;
-        height: 20px;
-        border-radius: 4px;
+
+.ant-pagination.mini .ant-pagination-item {
+    min-width: 20px;
+    height: 20px;
+    border-radius: 4px;
 }
-.ant-pagination.mini  .ant-pagination-item a {
-            color: #666;
-            font-size: 12px;
-            line-height: 18px;
-        }
-        .ant-pagination.mini  .ant-pagination-item:focus,
-        .ant-pagination.mini  .ant-pagination-item:hover {
-            border-color: #adb4bc;
-        }
-        .ant-pagination.mini  .ant-pagination-item:hover > a {
-            color: #333;
-        }
-    
-        .ant-pagination.mini .ant-pagination-item-active {
-        background: #adb4bc;
-        border-color: #adb4bc;
-        border-radius: 4px;
-        }
-        .ant-pagination.mini .ant-pagination-item-activ a {
-            color: #fff;
-            font-size: 12px;
-            line-height: 18px;
-        }
-        .ant-pagination.mini .ant-pagination-item-activ:focus,
-        .ant-pagination.mini .ant-pagination-item-activ:hover {
-            border-color: #adb4bc;
-        }
-        .ant-pagination.mini .ant-pagination-item-activ:hover > a {
-            color: #fff;
-        }
-    
 
-    .ant-pagination.mini .ant-pagination-total-text,
-    .ant-pagination.mini .ant-pagination-simple-pager {
-        font-size: 12px;
-        height: 20px;
-        line-height: 20px;
-    }
+.ant-pagination.mini .ant-pagination-item a {
+    color: #666;
+    font-size: 12px;
+    line-height: 18px;
+}
 
-    .ant-pagination.mini .ant-pagination-jump-prev
-        .ant-pagination-item-container
-        .ant-pagination-item-link-icon,
-    .ant-pagination.mini .ant-pagination-jump-next
-        .ant-pagination-item-container
-        .ant-pagination-item-link-icon {
-        color: #333;
-    }
+.ant-pagination.mini .ant-pagination-item:focus,
+.ant-pagination.mini .ant-pagination-item:hover {
+    border-color: #adb4bc;
+}
 
-    .ant-pagination-item,
-    .ant-pagination-total-text,
-    .ant-pagination-prev,
-    .ant-pagination-next,
-    .ant-pagination-jump-next,
-    .ant-pagination-options-quick-jumper{
-        height: 22px;
-        line-height: 22px;
-        font-size: 12px;
-    }
+.ant-pagination.mini .ant-pagination-item:hover>a {
+    color: #333;
+}
 
-    .ant-pagination-options-quick-jumper input {
-            border-radius: 4px;
-            font-size: 12px;
-            height: 22px;
-            line-height: 22px;
-            min-width: 28px;
-        }
-            .ant-pagination-options-quick-jumper input:focus,
-            .ant-pagination-options-quick-jumper input:hover{
-                border-color: #505766;
-            }
+.ant-pagination.mini .ant-pagination-item-active {
+    background: #adb4bc;
+    border-color: #adb4bc;
+    border-radius: 4px;
+}
+
+.ant-pagination.mini .ant-pagination-item-active a {
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.ant-pagination.mini .ant-pagination-item-active:focus,
+.ant-pagination.mini .ant-pagination-item-active:hover {
+    border-color: #adb4bc;
+}
+
+.ant-pagination.mini .ant-pagination-item-active:hover>a {
+    color: #fff;
+}
+
+
+.ant-pagination.mini .ant-pagination-total-text,
+.ant-pagination.mini .ant-pagination-simple-pager {
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.ant-pagination.mini .ant-pagination-jump-prev .ant-pagination-item-container .ant-pagination-item-link-icon,
+.ant-pagination.mini .ant-pagination-jump-next .ant-pagination-item-container .ant-pagination-item-link-icon {
+    color: #333;
+}
+
+.ant-pagination-item,
+.ant-pagination-total-text,
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-next,
+.ant-pagination-options-quick-jumper {
+    height: 22px;
+    line-height: 22px;
+    font-size: 12px;
+}
+
+.ant-pagination-options-quick-jumper input {
+    border-radius: 4px;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    min-width: 28px;
+}
+
+.ant-pagination-options-quick-jumper input:focus,
+.ant-pagination-options-quick-jumper input:hover {
+    border-color: #505766;
+}
 
 
 
@@ -111,6 +116,7 @@
 .ant-pagination-options-quick-jumper input-focused {
     box-shadow: none;
 }
+
 .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
     border-color: #505766;
 }
@@ -121,33 +127,36 @@
     line-height: 18px;
 }
 
-.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input)
-    .ant-select-selector {
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
     border-color: #505766;
     box-shadow: none;
 }
-.ant-select-single.ant-select-sm:not(.ant-select-customize-input) .ant-select-selector{
+
+.ant-select-single.ant-select-sm:not(.ant-select-customize-input) .ant-select-selector {
     height: 22px;
 }
-.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
     border-radius: 4px;
 }
-.ant-pagination.mini .ant-pagination-prev, 
-.ant-pagination.mini .ant-pagination-next{
+
+.ant-pagination.mini .ant-pagination-prev,
+.ant-pagination.mini .ant-pagination-next {
     height: 20px;
     min-width: 20px;
     line-height: 20px;
 }
 
-.ant-select-item-option-content{
+.ant-select-item-option-content {
     font-size: 12px;
 }
-.ant-select-item-option-active:not(.ant-select-item-option-disabled){
-    background-color: #F3F5F9!important;
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled) {
+    background-color: #F3F5F9 !important;
 }
 
-.ant-select-item-option-selected:not(.ant-select-item-option-disabled){
-    background-color: #FFF7E7!important;
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+    background-color: #FFF7E7 !important;
 }
 
 
