@@ -9,6 +9,10 @@
   height: 28px;
   padding: 0 8px;
 }
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: #505766;
+  box-shadow: none;
+}
 .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
   border-color: #505766;
 }
@@ -35,8 +39,8 @@
   .ant-select-tree-treenode {
   padding: 0 0 4px 8px;
 }
-.ant-select-single .ant-select-selector .ant-select-selection-item{
-    line-height: 26px;
+.ant-select-single .ant-select-selector .ant-select-selection-item {
+  line-height: 26px;
 }
 .ant-tree-select-dropdown
   .ant-select-tree-list-holder-inner
@@ -99,4 +103,69 @@
 }
 .ant-select-tree-indent .ant-select-tree-indent-unit {
   width: 10px;
+}
+
+.ant-select-tree-checkbox {
+  margin: 5px 0 0 8px;
+}
+.ant-select-show-search.ant-select:not(.ant-select-customize-input) .ant-select-selector{
+  border-radius: 4px;
+  height: 28px;
+  padding: 0 8px;
+}
+.ant-select-tree-checkbox-inner {
+  width: 14px;
+  height: 14px;
+}
+.ant-select-multiple .ant-select-selection-item {
+  margin: 0 4px 0 0;
+  height: 22px;
+  background: #f7f9fd;
+  border-radius: 2px;
+  border: 1px solid #dbe0e5;
+  color: rgba(0, 0, 0, 0.8);
+  align-items: center;
+}
+.ant-select-multiple .ant-select-selection-item-remove{
+  display: inline-flex;
+  align-items: center;
+}
+.ant-select-multiple .ant-select-selection-item-remove:hover{
+  color: #ee2223;
+}
+.ant-select-multiple .ant-select-selection-search{
+  margin-top: 0;
+}
+.ant-select-multiple .ant-select-selection-search-input, .ant-select-multiple .ant-select-selection-search-mirror{
+  height: 22px;
+  line-height: 22px;
+}
+.ant-select-selection-overflow{
+  height: 24px;
+}
+.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner::after {
+  width: 8px;
+  height: 3px;
+  background-color: #ee2223;
+}
+.ant-select-tree-checkbox-wrapper:hover .ant-select-tree-checkbox-inner,
+.ant-select-tree-checkbox:hover .ant-select-tree-checkbox-inner,
+.ant-select-tree-checkbox-input:focus + .ant-select-tree-checkbox-inner {
+  border-color: #505766;
+}
+.ant-select-tree-checkbox-inner::after {
+  top: 45%;
+  left: 20%;
+}
+.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner::after {
+  border: 2px solid #ee2223;
+  border-top: 0;
+  border-left: 0;
+}
+.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner {
+  background-color: #fff;
+  border-color: #ccc;
+}
+.ant-select-tree-checkbox-checked::after {
+  border-color: #505766;
 }
