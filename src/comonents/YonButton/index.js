@@ -50,11 +50,7 @@ YonButton.propTypes = {
     yonsize: PropTypes.string
 };
 
-YonButton.defaultProps = {
-    yontype: 'default',
-    width: '',
-    yonsize: ''
-};
+
 
 YonButton.Group = Group;
 export default YonButton

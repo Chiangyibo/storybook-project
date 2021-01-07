@@ -1,13 +1,3 @@
-/* 
-  total 【必选】
-  onChange 【必选】
-  onShowSizeChange 【必选】
-  pageSizeOptions 【可选】
-  fixedbottom 【可选】
-*/
-
-
-
 import React from 'react';
 import { Pagination, ConfigProvider } from 'antd';
 
@@ -68,14 +58,9 @@ YonPagination.propTypes = {
     total: PropTypes.number,
     onChange: PropTypes.func,
     onShowSizeChange: PropTypes.func,
+    /** 默认值：[10, 20, 50, 100] */
     pageSizeOptions: PropTypes.array
 };
 
-YonPagination.defaultProps = {
-    fixedbottom: false,
-    total: null,
-    onChange: null,
-    onShowSizeChange: null,
-    pageSizeOptions: [10, 20, 50, 100]
-};
+
 export default YonPagination;
