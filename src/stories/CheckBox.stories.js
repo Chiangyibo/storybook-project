@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { storiesOf } from '@storybook/react'
-import { Checkbox } from 'antd'
 import YonButton from '../comonents/YonButton'
+import YonCheckbox from '../comonents/YonCheckbox'
 
-import '../comonents/YonCheckbox/index.css'
 
 const YonCheckBox = () => {
   const [checked, setChecked] = useState(true)
@@ -24,10 +23,10 @@ const YonCheckBox = () => {
   return (
     <>
       <p style={{ marginBottom: "20px" }}>
-        <Checkbox checked={checked} disabled={disabled} onChange={onChange}>
+        <YonCheckbox checked={checked} disabled={disabled} onChange={onChange}>
           {checked ? "Checked" : "Unchecked"}-
           {disabled ? "Disabled" : "Enabled"}
-        </Checkbox>
+        </YonCheckbox>
       </p>
       <p>
         <YonButton yontype="primary" onClick={toggleChecked}>

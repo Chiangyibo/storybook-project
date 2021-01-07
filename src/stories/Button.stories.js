@@ -1,6 +1,6 @@
 import React from 'react';
-// import { Button } from "antd";
 import { storiesOf } from "@storybook/react";
+import { action } from '@storybook/addon-actions'
 import YonButton from '../comonents/YonButton';
 
 import { SearchOutlined, LeftOutlined, RightOutlined } from '@ant-design/icons';
@@ -55,10 +55,10 @@ const props = () => (<div>
   <div style={{ padding: '10px 0' }}>
     <YonButton yontype="primary" loading={false}>loading</YonButton>
     <YonButton yontype="primary" loading={true}>loading</YonButton>
-    <YonButton onClick={() => { alert('click') }}>onClick</YonButton>
+    <YonButton yontype="default" onClick={action('clicked')}>Click Me</YonButton>
 
-    <YonButton width="28px" shape="circle" icon={<SearchOutlined />}></YonButton>
-    <YonButton width="28px" shape="circle" icon={<SearchOutlined />} disabled></YonButton>
+    <YonButton yontype="default" width="28px" shape="circle" icon={<SearchOutlined />}></YonButton>
+    <YonButton yontype="default" width="28px" shape="circle" icon={<SearchOutlined />} disabled></YonButton>
   </div>
 
 

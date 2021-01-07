@@ -1,21 +1,3 @@
-/*
-    *  自定义属性有 yontype、width、yonsize; 其他属性继承 antd。
-    *  
-    *  默认按钮宽度最大140px、最小60px, 如果按钮宽度不在此范围内需要设置width。
-    *  block 失效，可用 width="100%" 替代。
-    *  
-    *  yonsize="small" 为行操作按钮，高度为 22px;
-    *  yonsize="middle" 为弹框按钮，高度为 26px;
-    *  默认按钮，高度为 28px;
-    * 
-*/
-
-/*
-    yontype: ['default', 'primary', 'dark', 'light', 'link']
-    yonsize: ['small', 'middle']
-    width: '28px'
-*/
-
 import React from 'react';
 import { Button } from 'antd';
 import PropTypes from 'prop-types';
@@ -52,14 +34,25 @@ const YonButton = (props) => {
 };
 
 YonButton.propTypes = {
+    /** 可选值：'default', 'primary', 'dark', 'light', 'link' */
     yontype: PropTypes.string,
+    /** 
+     * 默认按钮设置了 max-width: '140px'; min-width: '60px'; 
+     * 如果按钮宽度不在此范围内需要设置 width 属性。 
+     * */
     width: PropTypes.string,
+    /** 
+     * 可选值：'small', 'middle'; 
+     * 默认按钮，高度为 28px; 
+     * yonsize="small" 为行操作按钮，高度为 22px; 
+     * yonsize="middle" 为弹框按钮，高度为 26px; 
+     * */
     yonsize: PropTypes.string
 };
 
 YonButton.defaultProps = {
-    yontype: null,
-    width: null,
+    yontype: 'default',
+    width: '',
     yonsize: ''
 };
 

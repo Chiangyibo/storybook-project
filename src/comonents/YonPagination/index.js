@@ -63,6 +63,7 @@ const YonPagination = (props) => {
 };
 
 YonPagination.propTypes = {
+    /** 固定到底部 */
     fixedbottom: PropTypes.bool,
     total: PropTypes.number,
     onChange: PropTypes.func,
