@@ -33,20 +33,18 @@ const yonsize = () => <>
   <YonButton yontype="primary">28px 默认按钮</YonButton>
   <YonButton yonsize="middle" yontype="primary">26px 弹框按钮</YonButton>
   <YonButton yonsize="small" yontype="primary">22px 行操作按钮</YonButton>
-  <div style={{ height: '20px' }}></div>
-  <YonButton width="100%" yontype="primary">width == 100%</YonButton>
 </>;
 const width = () => <>
   <YonButton yontype="dark" width="100%" >block </YonButton>
-  <div style={{ height: '20px' }}></div>
   <YonButton yontype="dark" width="28px" icon={<SearchOutlined />}></YonButton>
 </>;
 
 const icon = () => <>
-  <YonButton type="link" icon={<Qita />}>自定义图标按钮</YonButton>
+  <YonButton yontype="link" icon={<Qita />}>自定义图标按钮</YonButton>
   <YonButton yontype="default" icon={<Caiwu />}>自定义图标按钮</YonButton>
-  <div style={{ height: '20px' }}></div>
-  <YonButton type="link" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
+ 
+  <YonButton yontype="link" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
+  <YonButton yontype="default" icon={<SearchOutlined />}>Antd 图标按钮</YonButton>
 </>;
 
 
