@@ -1,46 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { storiesOf } from '@storybook/react'
-import YonButton from '../comonents/YonButton'
+
 import YonCheckbox from '../comonents/YonCheckbox'
 
 
 const YonCheckBox = () => {
-  const [checked, setChecked] = useState(true)
-  const [disabled, setDisabled] = useState(false)
-
-  const toggleChecked = () => {
-    setChecked((c) => !c)
-  }
-
-  const toggleDisable = () => {
-    setDisabled((d) => !d)
-  }
-
-  const onChange = (e) => {
-    setChecked(e.target.checked)
-  }
 
   return (
     <>
-      <p style={{ marginBottom: "20px" }}>
-        <YonCheckbox checked={checked} disabled={disabled} onChange={onChange}>
-          {checked ? "Checked" : "Unchecked"}-
-          {disabled ? "Disabled" : "Enabled"}
+        <YonCheckbox>
+          checked 
         </YonCheckbox>
-      </p>
-      <p>
-        <YonButton yontype="primary" onClick={toggleChecked}>
-          {!checked ? "Check" : "Uncheck"}
-        </YonButton>
-        <YonButton
-          yontype="primary"
-          onClick={toggleDisable}
-        >
-          {!disabled ? "Disable" : "Enable"}
-        </YonButton>
-      </p>
+
+        <YonCheckbox checked>
+          checked 
+        </YonCheckbox>
+
+        <YonCheckbox disabled>
+          disabled 
+        </YonCheckbox>
     </>
   )
 }
 
-storiesOf("Checkbox", module).add("Checkbox", YonCheckBox)
+const note = `
+  ### 注释
+  仅改了样式，其他 API 全部继承 antd。
+`;
+
+storiesOf("Checkbox", module).add("Checkbox", YonCheckBox, {info:{text: note}})

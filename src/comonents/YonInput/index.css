@@ -1,0 +1,39 @@
+.ant-input{
+    border-radius: 4px;
+    font-size: 12px;
+    height: 28px;
+    line-height: 26px;
+}
+.ant-input:hover{
+    border-color: #505766;
+}
+.ant-input:focus, .ant-input-focused{
+    box-shadow: none;
+    border-color: #505766;
+}
+
+.required-star{
+    position: relative;
+}
+.required-star::after{
+    display: inline;
+    content: '*';
+    color: #ee2223;
+    position: absolute;
+    top: 10px;
+    left: -8px;
+}
+
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+    width: 0;
+    height: 0;
+}

@@ -30,7 +30,7 @@ const Tabs = () => <>
 
 const note = `
   ### 注释
-  仅改了样式，API 全部继承 antd。
+  仅改了样式，其他 API 全部继承 antd。
 `
 
 storiesOf("Tabs", module).add('Tabs', Tabs, {info:{text: note}});
