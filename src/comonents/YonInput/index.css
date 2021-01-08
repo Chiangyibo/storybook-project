@@ -24,6 +24,17 @@
     left: -8px;
 }
 
+.yon-label-style{
+    padding-right: 8px;
+    height: 28px;  
+    display: grid;
+    align-items: center;
+    max-width:122px;
+    text-align:right;
+    color: #666;
+    line-height:14px;
+    font-size:12px
+}
 .fr{
     float: right;
 }

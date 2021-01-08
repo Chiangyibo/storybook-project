@@ -69,19 +69,7 @@ const YonInput = (props) => {
                     width:'126px',
                 }}
             >
-                <span className={classNames('fr',{"required-star": props.required})}
-                    style={{
-                        paddingRight:'8px',
-                        height: '28px',  
-                        display: 'grid',
-                        alignItems: 'center',
-                        maxWidth:'122px',
-                        textAlign:'right',
-                        color: '#666',
-                        lineHeight:'14px',
-                        fontSize:'12px'
-                    }}
-                >
+                <span className={classNames({"required-star": props.required}, 'fr', 'yon-label-style')}>
                     {props.label}
                 </span>
             </span>
