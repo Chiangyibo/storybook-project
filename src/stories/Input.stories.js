@@ -7,6 +7,7 @@ import YonInput from '../comonents/YonInput';
 const InputSet = () => {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [password1, setPassword1] = useState('');
 
 
   return (<section>
@@ -14,7 +15,7 @@ const InputSet = () => {
           value={phone} 
           onChange={(e)=>{setPhone(e.target.value)}} 
           placeholder="required label rule errormsg style.width='300px'" 
-          label="有标题|有校验|有必输项|有宽度" 
+          label="有标题|有校验|有必输项|有宽度的两行标题" 
           rule="^\d{11}$" 
           errormsg="您输入的手机号有误！" 
           required  
@@ -28,7 +29,19 @@ const InputSet = () => {
           label="有标题|有校验|有宽度" 
           rule="^\d{6}$" 
           errormsg="您输入的密码有误！" 
-          onPressEnter={()=>{console.log(password)}}
+          onPressEnter={action(password)}
+          required
+          style={{width:'300px'}}
+        />
+        <br/>
+        <YonInput 
+          value={password1} 
+          onChange={(e)=>{setPassword1(e.target.value)}} 
+          placeholder="label rule errormsg style.width='300px'" 
+          label="有标题|有校验|有宽度" 
+          rule="^\d{6}$" 
+          errormsg="您输入的密码有误！" 
+          onPressEnter={action(password1)}
           style={{width:'300px'}}
         />
        <br/>
