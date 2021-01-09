@@ -1,0 +1,32 @@
+.ant-switch .ant-switch-handle {
+  position: absolute;
+  top: 0px;
+  top: -2px;
+  left: 0px;
+  width: 14px;
+  height: 14px;
+}
+.ant-switch {
+  position: relative;
+  height: 10px;
+  line-height: 10px;
+  width: 26px;
+  min-width: 26px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #858a94 0%, #b9bcc2 100%);
+}
+.ant-switch-checked {
+  background: linear-gradient(270deg, #a4c0f3 0%, #6a98eb 100%) !important;
+}
+.ant-switch-checked .ant-switch-handle {
+  left: calc(100% - 14px) !important;
+}
+.ant-switch-handle::before {
+  box-shadow: 0px 1px 4px 0px rgba(80, 87, 102, 0.3);
+}
+.ant-switch-checked:focus {
+  box-shadow: 0 0 0 2px rgba(141, 187, 245, 0.2);
+}
+.ant-switch-disabled {
+  background: #d9d9d9;
+}
