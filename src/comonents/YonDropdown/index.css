@@ -1,0 +1,18 @@
+.ant-select-dropdown-menu {
+    padding: 8px 0;
+}
+
+.ant-select-dropdown-menu-item-active,
+.ant-select-dropdown-menu-item-active:not(.ant-select-dropdown-menu-item-disabled) {
+    background-color: #fff7e7;
+}
+
+
+.ant-dropdown-menu-item:hover,
+.ant-dropdown-menu-submenu-title:hover {
+    background-color: #F3F5F9;
+}
+
+.ant-dropdown-menu{
+    border-radius: 4px;
+}

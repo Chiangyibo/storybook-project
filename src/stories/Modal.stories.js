@@ -53,7 +53,7 @@ const Modal = () => {
       visible={visibleConfirm}
       onOk={() => setVisibleConfirm(false)}
       onCancel={() => setVisibleConfirm(false)}
-      icon={<i className="iconfont iconxinxitubiao-lansetianchong"></i>}
+      icon={<i className="iconfont iconjingshitubiao-huangsetianchong"></i>}
     >
       一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息一些附加信息
     </Confirm>

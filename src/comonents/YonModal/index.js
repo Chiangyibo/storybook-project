@@ -35,12 +35,15 @@ const Confirm = (props) => {
         <div className="yon-modal-confirm-wrap">
             <span className="yon-modal-confirm-icon">
                 {
-                    props.icon ? props.icon : <i className="iconfont iconxinxitubiao-lansetianchong"></i>
+                    props.icon ? props.icon : <i className="iconfont iconjingshitubiao-huangsetianchong"></i>
                 }
             </span>
             <div className="yon-modal-confirm-content">
                 <h2 style={{height:'26px',fontSize:'16px',fontWeight:'600'}}>{props.text}</h2>
-                {props.children}
+
+                <div style={{maxHeight:'104px',overflow:'auto'}}>
+                    {props.children}
+                </div>
                 <div className="yon-modal-confirm-btns clearfix">
                     <YonButton yontype="primary" style={{ float: 'right' }} onClick={props.onOk} className="fr">确定</YonButton>
                     <YonButton yontype="light" style={{ float: 'right' }} onClick={props.onCancel} className="fr">取消</YonButton>
