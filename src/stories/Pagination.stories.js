@@ -15,8 +15,7 @@ const fixedbottom = () => <>
 
 
 const note = `
-  ### 注释
-  API 仅添加一个 fixedbottom，其他 API 全部继承 antd。
+  #### 注释：API 仅添加一个 fixedbottom，其他 API 全部继承 antd。
   * fixedbottom 固定到底部
 `
 

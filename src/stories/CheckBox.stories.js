@@ -24,8 +24,7 @@ const YonCheckBox = () => {
 }
 
 const note = `
-  ### 注释
-  仅改了样式，其他 API 全部继承 antd。
+  #### 注释：仅改了样式，其他 API 全部继承 antd。
 `;
 
 storiesOf("Checkbox", module).add("Checkbox", YonCheckBox, {info:{text: note}})

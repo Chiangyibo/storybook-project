@@ -63,8 +63,7 @@ const InputSet = () => {
 
 
 const note = `
-  ### 注释
-  添加了4个 API: label、required、rule、errormsg, 其他 API 全部继承 antd。
+  #### 注释：添加了4个 API: label、required、rule、errormsg, 其他 API 全部继承 antd。
   * rule 为校验规则，仅支持正则表达式，例如：'^\\d{11}$'
   * errormsg 为校验规则不满足时显示的错误提示信息
   * label 输入框前的标题

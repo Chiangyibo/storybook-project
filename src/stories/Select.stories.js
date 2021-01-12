@@ -23,8 +23,7 @@ const Select = () => <>
 </>;
 
 const note = `
-  ### 注释
-  仅改了样式，添加了2个 API: label、required, 其他 API 全部继承 antd。
+  #### 注释：仅改了样式，添加了2个 API: label、required, 其他 API 全部继承 antd。
   * label 输入框前的标题
   * required 是否为必输项
 `

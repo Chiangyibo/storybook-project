@@ -1,0 +1,30 @@
+.yon-message-success .ant-message-notice-content {
+    background: #EEF9F5;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid #30BD82;
+}
+
+.yon-message-warn .ant-message-notice-content {
+    background: #FFF7E8;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid #FFA600;
+}
+
+.yon-message-error .ant-message-notice-content {
+    background: #FFF4F2;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid #FF5735;
+}
+.yon-message-info .ant-message-notice-content {
+    background: #E6F7FF;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid #91D5FF;
+}
+
+.ant-message-notice-content{
+    padding: 8px 12px;
+}

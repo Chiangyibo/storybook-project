@@ -83,8 +83,7 @@ const props = () => (<div>
 
 
 const note = `
-  ### 注释
-  icon 属性传入的是一个组件，可以使用 antd 图标，也可以自定义图标
+  ####  注释：icon 属性传入的是一个组件，可以使用 antd 图标，也可以自定义图标。
 `
 
 storiesOf("Button", module)

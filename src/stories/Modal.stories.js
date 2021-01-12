@@ -65,8 +65,7 @@ const Modal = () => {
 
 
 const note = `
-  ### 注释
-  success、error、warn、info 全部继承 antd，仅改了样式。  
+  #### 注释：success、error、warn、info 全部继承 antd，仅改了样式。  
     重新封装了Confirm组件。 
   * 新增的API: icon, text。【图标、标题】
   * 删除的API: title, footer, width。

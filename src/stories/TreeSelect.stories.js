@@ -118,8 +118,7 @@ const TreeSelect = () => {
 }
 
 const note = `
-  ### 注释
-  只修改了样式，其他 API 全部继承 antd。
+  #### 注释：只修改了样式，其他 API 全部继承 antd。
   注意以下两点：
   * switcherIcon 已重置为空的span标签，展开收起图标已在css中重写；
   * maxTagCount 最多展示tag数已改为响应式

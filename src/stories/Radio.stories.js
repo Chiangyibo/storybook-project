@@ -40,8 +40,7 @@ const Radio = () => {
 }
 
 const note = `
-  ### 注释
-  仅改了样式，其他 API 全部继承 antd。
+  #### 注释：仅改了样式，其他 API 全部继承 antd。
 `
 
 storiesOf("Radio", module).add("Radio", Radio, { info: { text: note } })
