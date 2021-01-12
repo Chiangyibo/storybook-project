@@ -21,11 +21,13 @@ const YonButton = (props) => {
                     'no-min-width': !!props.width,
                     'yon-btn-small': props.yonsize === "small",
                     'yon-btn-middle': props.yonsize === "middle",
-                }
+                },
+                props.className,
             )}
             style={{
                 width: props.width ? props.width : null,
-                borderRadius: props.shape === "circle" ? "50%" : '4px'
+                borderRadius: props.shape === "circle" ? "50%" : '4px',
+                ...props.style
             }}
         >
             {props.children}

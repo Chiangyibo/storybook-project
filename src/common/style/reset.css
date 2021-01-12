@@ -1,0 +1,156 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+center,
+u,
+b,
+i {
+  margin: 0;
+  padding: 0;
+  /* border: 0;  */
+  /* outline: 0;  */
+  /* font-weight: normal; 
+    font-style: normal;  */
+  /* font-size: 100%;  */
+  /* font-family: inherit;  */
+  vertical-align: baseline
+}
+
+body {
+  line-height: 1;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei"
+}
+
+:focus {
+  outline: 0
+}
+
+ol,
+ul {
+  list-style: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: ''
+}
+
+blockquote,
+q {
+  quotes: ''''
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #000;
+  background-color: #000;
+  height: 1px
+}
+
+a {
+  text-decoration: none;
+  color: #588ce9;
+  cursor: pointer;
+}
+
+
+
+/*修改滚动条样式*/
+div::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #CDD9E6;
+  border-radius: 10px;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background: #CDD9E6;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CDD9E6;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b0c0d0 !important;
+}

@@ -1,0 +1,85 @@
+.yon-message-success .ant-message-notice-content {
+    background: #EEF9F5;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid #30BD82;
+}
+
+.yon-message-warn .ant-message-notice-content {
+    background: #FFF7E8;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid #FFA600;
+}
+
+.yon-message-error .ant-message-notice-content {
+    background: #FFF4F2;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: 1px solid #FF5735;
+}
+
+.ant-modal-body{
+    padding: 0;
+    overflow: auto;
+}
+.ant-message-notice-content{
+    padding: 8px 12px;
+}
+.ant-modal-header{
+    padding: 9px 13px;
+    color: #333;
+}
+.ant-modal-footer{
+    overflow: hidden;
+    padding: 9px 20px;
+}
+.ant-modal-content{
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.ant-modal-content .ant-modal-close-x{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+}
+.ant-modal-content .ant-modal-close-x:hover{
+    color: #ee2223;
+}
+.yon-modal-confirm-wrap{
+    display: flex;
+    padding: 32px;
+}
+
+.yon-modal-confirm-wrap .yon-modal-confirm-icon{
+    width: 40px;
+    padding-right: 16px;
+}
+.yon-modal-confirm-wrap .yon-modal-confirm-icon i{
+    font-size: 24px;
+    color: #ffa600;
+}
+
+.yon-modal-confirm-wrap .yon-modal-confirm-content{
+    flex: 1;
+}
+
+.yon-modal-confirm-btns{
+    height: 28px;
+    margin-top: 26px;
+}
+.fr{
+    float: right;
+}
+.fl{
+    float: left;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+    width: 0;
+    height: 0;
+}

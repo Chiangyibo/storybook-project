@@ -2,7 +2,8 @@ import React from 'react'
 import { configure, addDecorator, addParameters } from '@storybook/react';
 import { withInfo } from '@storybook/addon-info'
 
-import 'antd/dist/antd.css';
+
+import '../src/common/index.js';
 
 
 const style = { 
