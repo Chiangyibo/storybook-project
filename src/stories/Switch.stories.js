@@ -31,4 +31,4 @@ const note = `
   #### 注释：仅改了样式，其他 API 全部继承 antd。
 `
 
-storiesOf("Switch", module).add("Switch", Switch, { info: { text: note } })
+storiesOf("#Switch", module).add("#Switch", Switch, { info: { text: note } })

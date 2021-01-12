@@ -55,4 +55,4 @@ const note = `
   #### 注释：仅改了样式， API 全部继承 antd。
 `
 
-storiesOf("Empty", module).add('Empty', Empty, {info:{text: note}});
+storiesOf("#Empty", module).add('#Empty', Empty, {info:{text: note}});

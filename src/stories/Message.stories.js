@@ -18,4 +18,4 @@ const note = `
   #### 注释：仅改了样式， API 全部继承 antd。
 `
 
-storiesOf("Message", module).add('Message', Message, {info:{text: note}});
+storiesOf("#Message", module).add('#Message', Message, {info:{text: note}});

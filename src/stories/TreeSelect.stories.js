@@ -124,6 +124,6 @@ const note = `
   * maxTagCount 最多展示tag数已改为响应式
 `
 
-storiesOf("TreeSelect", module).add("TreeSelect", TreeSelect, {
+storiesOf("#TreeSelect", module).add("#TreeSelect", TreeSelect, {
   info: { text: note },
 })
