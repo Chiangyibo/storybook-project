@@ -1,0 +1,30 @@
+.ant-popover-inner-content .ant-popover-buttons .ant-btn-sm {
+    border-radius: 4px;
+    height: 26px;
+    line-height: 24px;
+    background: #dbe0e5;
+    color: #666;
+    border: none;
+}
+
+.ant-popover-inner-content .ant-popover-buttons .ant-btn-sm:hover,
+.ant-popover-inner-content .ant-popover-buttons .ant-btn-sm:focus {
+    background: #e5e9ec;
+    border: none;
+    color: #666;
+}
+.ant-popover-inner-content .ant-popover-buttons .ant-btn-primary {
+    border-radius: 4px;
+    height: 26px;
+    line-height: 24px;
+    background: linear-gradient(45deg, #fc4c2f, #ee2223)!important;
+    border: none!important;
+    color: #fff!important;
+}
+
+.ant-popover-inner-content .ant-popover-buttons .ant-btn-primary:hover,
+.ant-popover-inner-content .ant-popover-buttons .ant-btn-primary:focus {
+    background: linear-gradient(315deg, #fc4c2f, #ee2223)!important;
+    border: none!important;
+    color: #fff!important;
+}

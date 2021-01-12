@@ -10,7 +10,7 @@
 
 .ant-dropdown-menu-item:hover,
 .ant-dropdown-menu-submenu-title:hover {
-    background-color: #F3F5F9;
+    background-color: #F3F5F9!important;
 }
 
 .ant-dropdown-menu{
