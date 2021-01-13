@@ -27,7 +27,7 @@
     padding: 8px 12px;
 }
 .ant-modal-header{
-    padding: 9px 13px;
+    padding: 9px 16px;
     color: #333;
 }
 .ant-modal-footer{
@@ -44,6 +44,8 @@
     height: 40px;
     line-height: 40px;
     color: #999;
+    position: relative;
+    left: -10px;
 }
 .ant-modal-content .ant-modal-close-x:hover{
     color: #ee2223;
