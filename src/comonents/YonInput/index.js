@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import './index.css';
 
 
+
 const lang = {
     "zh_CN":{
         "RPA_L_90000000": "必输项",
@@ -21,7 +22,7 @@ const lang = {
 let locale = window.localStorage.getItem('locale') || 'zh_CN';
 
 
-const { TextArea, Search, Group, Password, Methods } = Input
+const { TextArea, Search, Group, Password, Methods } = Input;
 
 const YonInput = (props) => {
     const [errorState, setErrorState] = useState(false);
@@ -38,11 +39,8 @@ const YonInput = (props) => {
             setErrorState(true);
             setTipColor('#ccc')
 
-            if(props.required) {
-                setErrormsg(lang[locale].RPA_L_90000000)
-            } else {
-                setErrormsg('')
-            }
+            props.required ? setErrormsg(lang[locale].RPA_L_90000000) : setErrormsg('')
+            
         } else {
             if(props.rule && props.errormsg) {
                 let reg = new RegExp(props.rule)
@@ -59,44 +57,51 @@ const YonInput = (props) => {
                 
             }
         }
-    }, [props.value])
+    }, [props.value]);
 
     const wrapStyle = {
         display: props.style && props.style.width ? 'inline-block' : 'block',
-        height: props.type==="TextArea" ? '64px' : '44px'
+        height: props.type==="TextArea" ? (
+            props.style && props.style.height ? props.style.height : '64px'
+            ) : '44px',
+        marginBottom: props.style && props.style.height ? '16px' : '0'
     };
+
 
     return (<span className="clearfix" style={wrapStyle}>
         {
-            !!props.label && <span className="clearfix fl"
-                style={{
-                    display:'block',
-                    width:'126px',
-                }}
-            >
+            !!props.label && <span className="clearfix fl" style={{ display:'block', width:'126px' }} >
                 <span className={classNames({"required-star": props.required}, 'fr', 'yon-label-style')}>
                     {props.label}
                 </span>
             </span>
         }
-        <span style={{position:'relative',marginBottom:'16px'}}>
+        
+        <span style={{position:'relative'}}>
             {
                 props.type === "TextArea"
-                ? <span style={{ position:'relative',display:'inline-block' }}>
-                    <TextArea {...props} autoSize={false} ></TextArea> 
+                ? <span style={{position:'relative'}}>
+                    <TextArea 
+                        {...props} 
+                        autoSize={false} 
+                    ></TextArea> 
                     {props.suffix}
                 </span>
-                : <Input {...props} />
+                : <Input {...props} suffix={props.suffix}/>
             }
+            
             <em style={{
                 position:'absolute',
-                left:'0',
-                top: props.type==="TextArea" ? '20px' : '26px',
+                left:0,
+                right:0,
                 fontSize:'12px',
+                line:'12px',
                 lineHeight:'12px',
-                color: tipColor,
                 fontStyle:'normal',
-                visibility: props.required || errorState ? 'visible' : 'hidden'
+                color: tipColor,
+                visibility: props.required || errorState ? 'visible' : 'hidden',
+                display:'block',
+                zIndex:10000
             }}>
                 {errormsg}
             </em>
@@ -105,9 +110,7 @@ const YonInput = (props) => {
 };
 YonInput.propTypes = {
     label: PropTypes.string,
-    /** 校验规则：例如 '^\d{11}$' */
     rule: PropTypes.string,
-    /** 设置rule时要为其设置错误提示信息errormsg */
     errormsg: PropTypes.string,
     required: PropTypes.bool
 };

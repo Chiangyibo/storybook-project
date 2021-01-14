@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-
 import YonInput from '../YonInput';
 import YonModal from '../YonModal';
 import YonMessage from '../YonMessage';
@@ -9,6 +8,7 @@ import _ from 'lodash';
 
 import { GlobalOutlined } from '@ant-design/icons';
 import './index.css';
+
 
 const langMap = {
     "zh_CN": {
@@ -19,6 +19,8 @@ const langMap = {
         "RPA_L_00050011": "当前语言",
         "RPA_L_00050012": "企业账号语言",
         "RPA_L_00050013": "语言设置",
+        "RPA_L_00050014": "请检查必输项",
+        "RPA_L_00050015": "请输入...",
     },
     "zh_TW": {
         "RPA_L_00050007": "簡體中文",
@@ -28,6 +30,8 @@ const langMap = {
         "RPA_L_00050011": "當前語言",
         "RPA_L_00050012": "企業帳號語言",
         "RPA_L_00050013": "語言設定",
+        "RPA_L_00050014": "請檢查必輸項",
+        "RPA_L_00050015": "請輸入...",
     },
     "en_US": {
         "RPA_L_00050007": "Simpl. Chinese",
@@ -37,11 +41,14 @@ const langMap = {
         "RPA_L_00050011": "Current Language:",
         "RPA_L_00050012": "Enterprise Language:",
         "RPA_L_00050013": "Language Setting",
+        "RPA_L_00050014": "Please check the required items",
+        "RPA_L_00050015": "Please input...",
     },
 };
 const locale = window.localStorage.getItem('locale') || 'zh_CN';
 const sysLocale = window.localStorage.getItem('sysLocale') || 'zh_CN';
 const lang = langMap[locale];
+
 
 const setDefaultLocal = () => {
     window.localStorage.setItem('multiList', `[{
@@ -55,7 +62,6 @@ const setDefaultLocal = () => {
 };
 
 let cache = null;
-
 const YonMultiInput = (props) => {
     const [currentLang, setCurrentLang] = useState('');
     const [sysLang, setSysLang] = useState('');
@@ -140,7 +146,7 @@ const YonMultiInput = (props) => {
 
         setListArr(arr1.concat(arr));
         setTextMap(map);
-    }, [])
+    }, []);
 
     // 当外部数据变化时，更新内部数据
     useEffect(() => {
@@ -178,7 +184,7 @@ const YonMultiInput = (props) => {
     // 保存多语设置
     const onOk = () => {
         if (!textMap[locale]) {
-            YonMessage.error("请检查必输项!")
+            YonMessage.error(lang.RPA_L_00050014)
             return;
         }
         let map = _.cloneDeep(textMap);
@@ -204,6 +210,7 @@ const YonMultiInput = (props) => {
         setVisible(false)
     }
     
+    
     const showModal = () => {
         cache = _.cloneDeep(textMap);
         setVisible(true)
@@ -213,7 +220,6 @@ const YonMultiInput = (props) => {
         fontSize: '14px', 
         color: '#adb4bc'
     }
-
     const textAreaStyle={
         fontSize: '14px', 
         color: '#adb4bc',
@@ -223,12 +229,13 @@ const YonMultiInput = (props) => {
     }
     return (
         <section>
+            
             <YonInput
                 style={props.style}
                 label={props.label}
                 type={props.type}
                 required={props.required}
-                placeholder='请输入...'
+                placeholder={lang.RPA_L_00050015}
                 value={localVal}
                 onChange={onChange.bind(null, false)}
                 suffix={
@@ -238,6 +245,7 @@ const YonMultiInput = (props) => {
                     />
                 }
             />
+            
 
             <YonModal
                 title={lang.RPA_L_00050013}
@@ -260,9 +268,11 @@ const YonMultiInput = (props) => {
                         <p>{lang.RPA_L_00050010}</p>
                     </div>
 
+
+
                     {
                         listArr.map((item, index) => (
-                            <div className="multi-item" >
+                            <div className="multi-item">
                                 <div className="multi-input">
                                     {
                                         <YonInput
@@ -273,6 +283,7 @@ const YonMultiInput = (props) => {
                                             required={item.langCode === locale}
                                             label={item.displayName}
                                             style={{ width: 360 }}
+                                            placeholder={lang.RPA_L_00050015}
                                         />
                                     }
 
@@ -280,10 +291,17 @@ const YonMultiInput = (props) => {
                             </div>
                         ))
                     }
+
                 </div>
+
             </YonModal>
+
+
         </section>
+
     )
+
+
 }
 
 YonMultiInput.propTypes = {
@@ -308,6 +326,8 @@ YonMultiInput.propTypes = {
      *  } */
     onChange: PropTypes.func
 };
+
+
 
 export default YonMultiInput;
 

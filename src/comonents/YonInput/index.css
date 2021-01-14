@@ -1,45 +1,39 @@
-.ant-input {
+.ant-input{
     border-radius: 4px;
     font-size: 12px;
     height: 28px;
     line-height: 26px;
 }
-
-.ant-input:hover {
+.ant-input:hover{
     border-color: #505766;
 }
-
-.ant-input:focus,
-.ant-input-focused {
+.ant-input:focus, .ant-input-focused{
     box-shadow: none;
     border-color: #505766;
 }
 
-.ant-input-affix-wrapper {
+.ant-input-affix-wrapper{
     border-radius: 4px;
     font-size: 12px;
     height: 28px;
     line-height: 26px;
     padding: 0px 11px;
 }
-
-.ant-input-affix-wrapper .ant-input {
+.ant-input-affix-wrapper .ant-input{
     border-radius: 4px;
     font-size: 12px;
     height: 26px;
     box-shadow: none;
 }
-
-.ant-input-affix-wrapper:hover {
+.ant-input-affix-wrapper:hover{
     border-color: #505766;
 }
 
-.ant-input-affix-wrapper:focus,
-.ant-input-affix-wrapper-focused {
+.ant-input-affix-wrapper:focus, 
+.ant-input-affix-wrapper-focused{
     box-shadow: none;
     border-color: #505766;
 }
-
 
 
 textarea {
@@ -50,12 +44,10 @@ textarea.ant-input {
     height: 46px;
 }
 
-
-.required-star {
+.required-star{
     position: relative;
 }
-
-.required-star::after {
+.required-star::after{
     display: inline;
     content: '*';
     color: #ee2223;
@@ -64,38 +56,27 @@ textarea.ant-input {
     left: -8px;
 }
 
-.yon-label-style {
+.yon-label-style{
     padding-right: 8px;
-    height: 28px;
+    height: 28px;  
     display: grid;
     align-items: center;
-    max-width: 122px;
-    text-align: right;
+    max-width:122px;
+    text-align:right;
     color: #666;
-    line-height: 14px;
-    font-size: 12px
+    line-height:14px;
+    font-size:12px
 }
-
-.fr {
+.fr{
     float: right;
 }
-
-.fl {
+.fl{
     float: left;
 }
-
-.clearfix::after {
+.clearfix::after{
     content: "";
     clear: both;
     display: block;
     width: 0;
     height: 0;
-}
-
-textarea.ant-input {
-    color: #333;
-}
-
-textarea {
-    resize: none !important;
 }
