@@ -249,7 +249,6 @@ const YonMultiInput = (props) => {
                 maskClosable={false}
             >
                 <div className='multi-card'>
-
                     <div className="tip-wrap">
                         <p style={{ lineHeight: '30px' }}>
                             {lang.RPA_L_00050011}
@@ -263,9 +262,7 @@ const YonMultiInput = (props) => {
 
                     {
                         listArr.map((item, index) => (
-                            <div className="multi-item" style={{ marginBottom: props.type === 'TextArea' ? '20px' : '0px' }}>
-
-
+                            <div className="multi-item" >
                                 <div className="multi-input">
                                     {
                                         <YonInput

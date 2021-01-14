@@ -24,6 +24,14 @@ const MultiInput = () => {
         name="description"
         label="描述"
         type="TextArea"
+        required
+        onChange={action('---')} 
+        style={{ width: 280 }} 
+      />
+      <YonMultiInput 
+        name="description"
+        label="描述"
+        type="TextArea"
         onChange={action('---')} 
         style={{ width: 280 }} 
       />

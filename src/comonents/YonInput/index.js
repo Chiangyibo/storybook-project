@@ -63,7 +63,7 @@ const YonInput = (props) => {
 
     const wrapStyle = {
         display: props.style && props.style.width ? 'inline-block' : 'block',
-        height: props.type==="TextArea" ? '46px' : '44px'
+        height: props.type==="TextArea" ? '64px' : '44px'
     };
 
     return (<span className="clearfix" style={wrapStyle}>
