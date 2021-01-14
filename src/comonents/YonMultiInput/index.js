@@ -9,7 +9,6 @@ import _ from 'lodash';
 
 import { GlobalOutlined } from '@ant-design/icons';
 import './index.css';
-const { TextArea } = YonInput;
 
 const langMap = {
     "zh_CN": {
@@ -44,7 +43,6 @@ const locale = window.localStorage.getItem('locale') || 'zh_CN';
 const sysLocale = window.localStorage.getItem('sysLocale') || 'zh_CN';
 const lang = langMap[locale];
 
-
 const setDefaultLocal = () => {
     window.localStorage.setItem('multiList', `[{
         "default":true,
@@ -56,20 +54,17 @@ const setDefaultLocal = () => {
     }]`);
 };
 
+let cache = null;
+
 const YonMultiInput = (props) => {
     const [currentLang, setCurrentLang] = useState('');
     const [sysLang, setSysLang] = useState('');
     const [visible, setVisible] = useState(false);
 
-
-
     const [listArr, setListArr] = useState([]);
     const [textMap, setTextMap] = useState(props.propsTextMap || {});
 
-
     const [localVal, setLocalVal] = useState((props.propsTextMap && props.propsTextMap[locale]) || '');
-
-
 
     // 初始化页面多语翻译
     useEffect(() => {
@@ -145,9 +140,7 @@ const YonMultiInput = (props) => {
 
         setListArr(arr1.concat(arr));
         setTextMap(map);
-    }, []);
-
-
+    }, [])
 
     // 当外部数据变化时，更新内部数据
     useEffect(() => {
@@ -163,8 +156,6 @@ const YonMultiInput = (props) => {
         }
         props.onChange(data);
     }, [localVal]);
-
-
 
     const onChange = (langCode, e) => {
         let str = e.target.value;
@@ -208,9 +199,28 @@ const YonMultiInput = (props) => {
 
     // 取消多语设置
     const onCancel = () => {
+        setTextMap(cache)
+        setLocalVal(cache[locale])
         setVisible(false)
     }
+    
+    const showModal = () => {
+        cache = _.cloneDeep(textMap);
+        setVisible(true)
+    }
 
+    const inputGlobalStyle={
+        fontSize: '14px', 
+        color: '#adb4bc'
+    }
+
+    const textAreaStyle={
+        fontSize: '14px', 
+        color: '#adb4bc',
+        position: 'absolute',
+        top: '6px',
+        right: '11px'
+    }
     return (
         <section>
             <YonInput
@@ -219,10 +229,14 @@ const YonMultiInput = (props) => {
                 type={props.type}
                 required={props.required}
                 placeholder='请输入...'
-                autocomplete="off"
                 value={localVal}
                 onChange={onChange.bind(null, false)}
-                suffix={<GlobalOutlined style={{ fontSize: '14px', color: '#adb4bc' }} onClick={() => setVisible(true)} />}
+                suffix={
+                    <GlobalOutlined 
+                        style={props.type === 'TextArea' ? textAreaStyle : inputGlobalStyle} 
+                        onClick={showModal} 
+                    />
+                }
             />
 
             <YonModal
@@ -247,8 +261,6 @@ const YonMultiInput = (props) => {
                         <p>{lang.RPA_L_00050010}</p>
                     </div>
 
-
-
                     {
                         listArr.map((item, index) => (
                             <div className="multi-item" style={{ marginBottom: props.type === 'TextArea' ? '20px' : '0px' }}>
@@ -271,19 +283,11 @@ const YonMultiInput = (props) => {
                             </div>
                         ))
                     }
-
                 </div>
-
             </YonModal>
-
-
         </section>
-
     )
-
-
 }
-
 
 YonMultiInput.propTypes = {
     /** 例如：'name', 'description', 'note' */

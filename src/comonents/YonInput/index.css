@@ -40,6 +40,17 @@
     border-color: #505766;
 }
 
+
+
+textarea {
+    resize: none !important;
+}
+
+textarea.ant-input {
+    height: 46px;
+}
+
+
 .required-star {
     position: relative;
 }
