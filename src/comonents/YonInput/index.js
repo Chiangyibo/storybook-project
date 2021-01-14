@@ -61,7 +61,12 @@ const YonInput = (props) => {
         }
     }, [props.value])
 
-    return (<span className="clearfix" style={{display: props.style && props.style.width ? 'inline-block' : 'block',height:'44px'}}>
+    const wrapStyle = {
+        display: props.style && props.style.width ? 'inline-block' : 'block',
+        height: props.type==="TextArea" ? '66px' : '44px'
+    };
+
+    return (<span className="clearfix" style={wrapStyle}>
         {
             !!props.label && <span className="clearfix fl"
                 style={{
@@ -75,11 +80,15 @@ const YonInput = (props) => {
             </span>
         }
         <span style={{position:'relative',marginBottom:'16px'}}>
-            <Input {...props}/>
+            {
+                props.type === "TextArea"
+                ? <TextArea {...props} autoSize={false}/>
+                : <Input {...props}/>
+            }
             <em style={{
                 position:'absolute',
                 left:'0',
-                top:'26px',
+                top: props.type==="TextArea" ? '20px' : '26px',
                 fontSize:'12px',
                 lineHeight:'12px',
                 color: tipColor,
@@ -100,7 +109,7 @@ YonInput.propTypes = {
     required: PropTypes.bool
 };
 
-YonInput.TextArea = TextArea;
+
 YonInput.Search = Search;
 YonInput.Group = Group;
 YonInput.Password = Password;

@@ -53,6 +53,39 @@ const InputSet = () => {
 
 
         <YonInput placeholder="默认100%宽度"/>
+        <YonInput placeholder="默认100%宽度" type="TextArea"/>
+
+
+        <YonInput 
+          value={phone} 
+          onChange={(e)=>{setPhone(e.target.value)}} 
+          placeholder="label、rule、errormsg、style.width='300px'" 
+          label="有标题|有校验|有必输项|有宽度" 
+          rule="^\d{11}$" 
+          errormsg="您输入的手机号有误！" 
+          required  
+          style={{width:'300px'}}
+          type="TextArea"
+        />
+        
+        <YonInput 
+          value={password} 
+          onChange={(e)=>{setPassword(e.target.value)}} 
+          placeholder="label、rule、errormsg、style.width='300px'" 
+          label="有标题|有校验|有宽度" 
+          rule="^\d{6}$" 
+          errormsg="您输入的密码有误！" 
+          onPressEnter={()=>{console.log(password)}}
+          style={{width:'300px'}}
+          type="TextArea"
+        />
+       
+        <YonInput 
+          placeholder="label、style.width='300px' "  
+          label="有标题|有宽度"  
+          style={{width:'300px'}}
+          type="TextArea"
+        />
     </section>)
 
 

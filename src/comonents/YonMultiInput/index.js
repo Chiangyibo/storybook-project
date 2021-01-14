@@ -119,16 +119,16 @@ const YonMultiInput = (props) => {
 
         multiList.forEach((item, index) => {
             // 当前语言 、企业语言 相同时
-            if (locale == sysLocale) {
-                if (item.langCode == locale) {
+            if (locale === sysLocale) {
+                if (item.langCode === locale) {
                     arr.unshift(item);
                 } else {
                     arr.push(item)
                 }
             } else {
-                if (item.langCode == locale) {
+                if (item.langCode === locale) {
                     arr1[0] = item;
-                } else if (item.langCode == sysLocale) {
+                } else if (item.langCode === sysLocale) {
                     arr1[1] = item;
                 } else {
                     arr.push(item);
@@ -216,6 +216,7 @@ const YonMultiInput = (props) => {
             <YonInput
                 style={props.style}
                 label={props.label}
+                type={props.type}
                 required={props.required}
                 placeholder='请输入...'
                 autocomplete="off"
@@ -250,27 +251,20 @@ const YonMultiInput = (props) => {
 
                     {
                         listArr.map((item, index) => (
-                            <div className="multi-item" style={{ marginBottom: props.type == 'TextArea' ? '20px' : '0px' }}>
+                            <div className="multi-item" style={{ marginBottom: props.type === 'TextArea' ? '20px' : '0px' }}>
 
 
                                 <div className="multi-input">
                                     {
-                                        props.type == 'TextArea' ? <TextArea
+                                        <YonInput
                                             value={textMap[item.langCode]}
+                                            type={props.type}
                                             onChange={onChange.bind(null, item.langCode)}
                                             key={item.langCode}
                                             required={item.langCode === locale}
                                             label={item.displayName}
                                             style={{ width: 360 }}
-                                            rows={6}
-                                        /> : <YonInput
-                                                value={textMap[item.langCode]}
-                                                onChange={onChange.bind(null, item.langCode)}
-                                                key={item.langCode}
-                                                required={item.langCode === locale}
-                                                label={item.displayName}
-                                                style={{ width: 360 }}
-                                            />
+                                        />
                                     }
 
                                 </div>
